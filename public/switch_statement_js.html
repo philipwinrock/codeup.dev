@@ -1,0 +1,100 @@
+<html>
+<head>
+    <title>If Else JS</title>
+</head>
+<body>
+    <script>
+    // ignore these lines for now
+    // just know that the variable 'color' will end up with a random value from the colors array
+    
+    var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
+    var color = colors[Math.floor(Math.random()*colors.length)];
+
+    var favorite = 'blue';
+
+    switch (color) {
+
+        // todo: create a case statement that will handle every color except indigo and violet
+        // todo: when a color is encountered log a message that tells the color, and an object of that color
+        //       example: Blue is the color of the sky.
+
+        // todo: create a default case that will catch indigo and violet
+        // todo: for the default case, log: I do not know anything by that color.
+        case "blue":
+            //console.log("Color is blue.");
+            message = 'FAVORITE Color is blue.';
+            break;
+
+            case "red":
+            //console.log("Color is red.");
+            message = 'Color is red.';
+            break;
+
+            case "orange":
+            //console.log("Color is orange.");
+            message = 'Color is orange.';
+            break;
+
+            case "yellow":
+            //console.log("Color is yellow.");
+            message = 'Color is yellow.';
+            break;
+
+            case "green":
+            //console.log("Color is red.");
+            message = 'Color is red.';
+            break;
+
+            case "violet or indigo":
+            //console.log('color indigo and violet')
+        default:
+            message = 'default violet or indigo.';
+   }			
+
+
+
+    console.log(message);
+
+
+ //todo, change this to your favorit
+
+//if (color == favorite) {};
+
+// if (color == 'blue') {
+//     message = "favorite is blue.";
+// } else  {
+//     message = "it is not.";
+// }
+//  if(color == 'red') {
+// 	message = "sailer take warning";
+// } else {
+// 	message = "sailer go drinking";
+// }
+//  if(color == 'orange'){
+//  	message = "beautiful sunset";
+//  }
+//  else {
+//  	message = "drink orange juice";
+//  }
+//  if(color == 'yellow'){
+//  	message = "think of bananas";
+//  }
+ 
+//  else {
+//  	message = "yellow submarine";
+ 
+//  }
+//  if(color=='green'){
+//  	message= "I am green";
+//  }else {
+//  	message = "Not so green";
+//  }
+// 	console.log(message);
+
+    </script>
+
+
+
+
+</body>
+</html>
