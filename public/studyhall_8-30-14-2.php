@@ -1,25 +1,25 @@
 <?php 
 
-// $array = [
-// 	'one', 
-// 	'two', 
-// 	'three'
-// ];
+$array = [
+	'one', 
+	'two', 
+	'three'
+];
 
-// print_r($array);
+print_r($array);
 
-// echo $array[1] . PHP_EOL;
+echo $array[1] . PHP_EOL;
 
-// $assoc_array = [
-// 	'key0' => 'one',
-// 	'key1' => 'two',
-// 	'key2' => 'three'
-// ];
+$assoc_array = [
+	'key0' => 'one',
+	'key1' => 'two',
+	'key2' => 'three'
+];
 
-// print_r($assoc_array);
+print_r($assoc_array);
 
-// echo $assoc_array['key1'] . PHP_EOL;
-
+echo $assoc_array['key1'] . PHP_EOL;			//two different programs
+-------------------------------------------------------------------------------------
 $multi_array = [
 	'groceries' => [
 			'item1'	=>	'apples', 
