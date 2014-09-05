@@ -17,10 +17,10 @@
     <h2 id="sub-header">Hello Again.</h2>
 
 
-    <button id="button1">#1</button>
-    <button id="button2">#2</button>
-    <button id="button3">#3</button>
-    <button id="button4">#4</button>
+    <p><button id="button1">Click to alter main header!</button></p>
+    <button id="button2">Btn2</button>
+    <button id="button3">Btn3</button>
+    <button id="button4">Btn4</button>
 
     
 
@@ -38,16 +38,10 @@
 
     <script>
 
-       var main-header = document.getElementById('main-header');
-       var button1 = document.geteElementByIdinnerHTML('main-header');
-       // <div id="innerHTMLtxt"></div>
+       
 
-
-
-      var button = document.getElementById("button1");
-      var button = document.getElementById("button2");
-      var button = document.getElementById("button3");
-      var button = document.getElementById("button4");
+      
+     
         
 
 
@@ -61,11 +55,16 @@
 
 
         // todo: get the main header element by id
+
         var mainHeader = document.getElementById('main-header');
         console.log(mainHeader);
-        // todo: set inner html of mainHeader to "JavaScript is Cool"
+
+        // todo: set inner html of mainHeader to "JavaScript is Cool
+        var button1 = addEventListener('click', function() {
         mainHeader.innerHTML = "JavaScript is Cool";
         console.log(mainHeader.innerHTML);
+        }
+        
         // todo: get the sub header element by id
          var subHeader = document.getElementById('sub-header');
          console.log(subHeader);
