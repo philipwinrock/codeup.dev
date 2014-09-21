@@ -87,16 +87,16 @@ if (!empty($_POST)) {
 	<? endif; ?>
 
 
-         <h2>Add a new Park</h2>
+         <h2>Add New Park</h2>
     <form method="POST">
         <label for="Park_name">Parkname: </label> <input type="text" name="Park_name" id="Park_name" class="form-control"> <br>
         <label for="Location">Location: </label> <input type="text" name="Location" id="Location" class="form-control"> <br>
         <label for="Date-estab">Date-Estab: </label> <input type="text" name="Date-estab" id="Date-estab" class="form-control"> <br>
-        <!-- <label for="state">State: </label> <input type="text" name="state" id="state" class="form-control"> <br> -->
         <label for="Total-acres">Total-acres: </label> <input type="text" name="Total-acres" id="Total-acres" class="form-control"> <br>
         <label for="Description">Describtion: </label> <input type="text" name="Description" id="Description" class="form-control"> <br> 
         <input type="submit" value="Submit" class="btn btn-primary">
     </form>      
+        <
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
