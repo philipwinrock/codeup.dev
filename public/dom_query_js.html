@@ -54,40 +54,40 @@
 
 
 
-        // todo: get the main header element by id
+                / / todo: get the main header element by id
 
         var mainHeader = document.getElementById('main-header');
-        console.log(mainHeader);
+            console.log(mainHeader);
 
-        // todo: set inner html of mainHeader to "JavaScript is Cool
+                // todo: set inner html of mainHeader to "JavaScript is Cool
         var button1 = addEventListener('click', function() {
-        mainHeader.innerHTML = "JavaScript is Cool";
-        console.log(mainHeader.innerHTML);
-        }
+            mainHeader.innerHTML = "JavaScript is Cool";
+                console.log(mainHeader.innerHTML);
+    }
         
-        // todo: get the sub header element by id
+                // todo: get the sub header element by id
          var subHeader = document.getElementById('sub-header');
-         console.log(subHeader);
-        // todo: set the text color of subHeader to blue
-            subHeader.style['color'] = 'blue';
             console.log(subHeader);
+                // todo: set the text color of subHeader to blue
+                subHeader.style['color'] = 'blue';
+                    console.log(subHeader);
 
-        // todo: get all list items
+                 // todo: get all list items
          var listItems = document.getElementsByTagName('li');
          
          console.log(listItems);
 
-        // todo: set text color on every other list item to grey
-        // todo: set text color of li with dbid = 1 to blue
+                // todo: set text color on every other list item to grey
+                // todo: set text color of li with dbid = 1 to blue
         for (var i = 0; i < listItems.length; i+=2) {
             listItems[i].style['color'] = 'red';
-        }
+    }
 
         listItems[0].style['color'] = 'blue';
         console.log(listItems);
     
 
-        // todo: get all elements with class name sub-paragraph
+                 // todo: get all elements with class name sub-paragraph
          var subParagraphs = document.getElementsByClassName('sub-paragraph');
          console.log(typeof(subParagraphs));
          subParagraphs[0].innerHTML = "Mission Accomplished";

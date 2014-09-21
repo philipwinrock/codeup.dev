@@ -3,15 +3,38 @@
 	<title></title>
 <script>
 
-	var myName = {};
+	var person = {};
 
-	myName.first = "Philip";
-    myName.last = "Winrock";
+	person.firstName = 'Philip';
+    person.lastName = 'Winrock';
 
-    myName.logfirstlast = function () {
-    	console.log('myName first/last is: ' + this.first + ' ' + this.last);
-	};
-	myName.logfirstlast();
+
+
+	
+	person.sayHello =function(){
+
+		alert(this.first + '  '  +  this.lastName  + 'hello');
+	}
+	
+	person.sayHello();
+
+
+
+
+
+
+
+
+
+	// todo:
+// Create person object with firstName and lastName properties (set to your first and last name).
+// var person = todo;
+
+// todo:
+// Add a say hello method to the person object that alerts hello using the firstName and lastName properties.
+
+// Say hello from the person object.
+// person.sayHello();
 
 
 </script>
