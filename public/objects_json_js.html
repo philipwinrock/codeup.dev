@@ -1,0 +1,121 @@
+<html>
+<head>
+    <title>External JS</title>
+</head>
+<body>
+    <script>
+
+
+
+
+
+				// todo:
+
+
+			// Create an array of objects that represent books.
+
+
+			var books= [
+
+				{							      //book1//
+					'title' : 'Ocean Voyage',
+					'Author': 
+							{
+								'firstName' : 'John', 
+								'lastName'  : 'Smith'
+							}
+
+
+
+				},
+				{ 
+					                             //book2//
+					'title': 'Travels with Andy',
+					'Author':
+					        {
+					       	 'firstName' : 'Andy',
+					       	 'lastName'  : 'Warhol'
+
+
+						    }
+
+
+				},
+
+				{
+										//book3//
+					'title'	:  'Submariner',
+					'Author': 
+							{
+								'firstName' : 'John',
+								'lastName'  : 'Davies'
+							}				
+				},
+
+				{
+										//book4
+					'title' :  'Pelican Brief',
+					'Author': 
+							{
+								'firstName' : 'Denzel',
+								'lastName'  : 'Roberts'	
+
+							}					
+				}
+
+			];
+				// Each book should have a title and an author.
+				// The book author should be an object with a firstName and lastName.
+				// Be creative and add at least 5 books to the array
+					// var books = [todo];
+
+					// log out the books array
+			console.log(books);
+
+					// todo:
+				// Loop through the array of books using .forEach and print out the specified information about each one.
+							// start loop here
+				books.forEach(function (book, index) {
+ 			   		console.log("Book " +  (index +1));
+  				  	console.log("Title: " + book.title);
+   				 	console.log("Author: " + book.Author.firstName + book.Author.lastName);
+   				 	console.log("---");
+					// end loop here
+				});
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+    
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
