@@ -28,7 +28,7 @@ require '../dbconnect.php';
 		<th><h2><u>Park Name</u></h2></th>
 		<th><h2><u>Location</u></h2></th>
 		<th><h2><u>Date Est.</u></h2></th>
-		<th><h2><u>Tot. Acres</u></h2></th>
+		<th><h2><u>Area in Acres</u></h2></th>
 
 
  
@@ -96,7 +96,7 @@ if (!empty($_POST)) {
         <label for="Description">Describtion: </label> <input type="text" name="Description" id="Description" class="form-control"> <br> 
         <input type="submit" value="Submit" class="btn btn-primary">
     </form>      
-        <
+        
 
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
