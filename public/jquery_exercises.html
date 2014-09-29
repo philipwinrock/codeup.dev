@@ -6,13 +6,41 @@
             text-align: center;
         }
     </style>
-    <script src="/js/jquery.js"></script>
+    <script src="jquery-1.11.1.js"></script>
+    <script>
+        $('document').ready(function() {
+            $('li').css('font-size', '30px');
+			$('h1').css('background-color', 'yellow');
+			$('li').css('background-color', 'yellow');
+			$('p').css('background-color', 'yellow');
+			$('h1').dblclick(function() {
+    			$(this).html('magic');
+    		})
+		});
+    		
+    		
+				
+     		
+ 		
+
+    </script>
 </head>
 <body>
+	
+			$('h1').dblclick(function() {
+    			$(this).html('magic');
+    		});
+
+    	
     <h1>Example Page</h1>
     <div class="important">
         <h3>NOTICE</h3>
         <p>This is an important message!</p>
+        
+        	<ul><li>how does it happen</li></ul>
+
+
+        
     </div>
     <div class="not-important">
         <h2>Lorem Ipsum</h2>
