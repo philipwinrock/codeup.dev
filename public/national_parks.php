@@ -1,39 +1,6 @@
 <?php
 require '../dbconnect.php';
 
-
-	$offset= isset($_GET['offset']) ? intval($_GET['offset']) : 0;
-
-		$stmt = $dbc->query("SELECT park_name, location ,date_established , area_in_acres FROM national_parks 
-
-			LIMIT 4 OFFSET $offset");
-
-				$parks = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-					$count=(int)$dbc->query('SELECT count(*) FROM national_parks')->fetchColumn();
-?>
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>National Parks</title>
-			<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-
-			<style>body { background-color: #d0e4fe; } </style>
-
-	
-</head>
-<body>
-
-		<table class= 'table'>
-		<th><h2><u>Park Name</u></h2></th>
-		<th><h2><u>Location</u></h2></th>
-		<th><h2><u>Date Est.</u></h2></th>
-		<th><h2><u>Area in Acres</u></h2></th>
-
-
- 
-<?php
-
 if (!empty($_POST)) {
 	// var_dump($_POST);
 
@@ -50,9 +17,8 @@ if (!empty($_POST)) {
 	    $national_park['date_established'] = $_POST['Date-estab'];
 	    $national_park['area_in_acres'] = 	 $_POST['Total-acres'];
 		$national_park['description'] = 	 $_POST['Description'];
-	}
 
-	$query = 'INSERT INTO national_parks(park_name, location, date_established, area_in_acres, description) VALUES (:park_name, :location, :date_established, :area_in_acres, :description)';
+	$query = 'INSERT INTO national_parks (park_name, location, date_established, area_in_acres, description) VALUES (:park_name, :location, :date_established, :area_in_acres, :description)';
 
 		$stmt = $dbc->prepare($query);
 		$stmt->bindValue(':park_name', 		 $national_park['park_name'],		PDO::PARAM_STR);
@@ -60,30 +26,59 @@ if (!empty($_POST)) {
 		$stmt->bindValue(':date_established',$national_park['date_established'],PDO::PARAM_STR);
 		$stmt->bindValue(':area_in_acres',   $national_park['area_in_acres'],	PDO::PARAM_STR);
 		$stmt->bindValue(':description',  	 $national_park['description'],		PDO::PARAM_STR);
+
 		$stmt->execute();
 
+	}
 }
 
+$offset= isset($_GET['offset']) ? intval($_GET['offset']) : 0;
+	// function getParks
+$stmt = $dbc->query("SELECT park_name, location ,date_established , area_in_acres FROM national_parks 
 
+LIMIT 4 OFFSET $offset");
+
+				$parks = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+					$count=(int)$dbc->query('SELECT count(*) FROM national_parks')->fetchColumn();
 
 
 ?>
+<!DOCTYPE html>
+<html>
+<head>
+	<title>National Parks</title>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+
+<style>body { background-color: #d0e4fe; } </style>
+
+	
+</head>
+<body>
+
+	<table class= 'table'>
+	<th><h2><u>Park Name</u></h2></th>
+	<th><h2><u>Location</u></h2></th>
+	<th><h2><u>Date Est.</u></h2></th>
+	<th><h2><u>Area in Acres</u></h2></th>
 
 
-		<?foreach ($parks as $parkInfo):?>
-			<tr>
-				<td><h3><?= $parkInfo['park_name'];?></h3></td>
-				<td><h4><?= $parkInfo['location'];?></h4></td>
-				<td><h4><?= $parkInfo['date_established'];?></h4></td>
-				<td><h4><?= $parkInfo['area_in_acres'];?></h4></td>
-			</tr>
-		<?endforeach;?>
-	</table>
+<?foreach ($parks as $parkInfo):?>
+<tr>
+	<td><h3><?= $parkInfo['park_name'];?></h3></td>
+	<td><h4><?= $parkInfo['location'];?></h4></td>
+	<td><h4><?= $parkInfo['date_established'];?></h4></td>
+	<td><h4><?= $parkInfo['area_in_acres'];?></h4></td>
+</tr>
+
+<?endforeach;?>
+
+</table>
 	<? if ($offset != 0):?>
 		<a href="?offset=<?=$offset-4;?>"><button class="btn btn-primary">Prev</button></a>
 	<? endif; ?> 
-	<? if (($offset +4)< $count): ?>
-		<a href="?offset=<?=$offset+4;?>"><button class="btn btn-primary pull-right">Next</button></a> 
+<? if (($offset +4)< $count): ?>
+	<a href="?offset=<?=$offset+4;?>"><button class="btn btn-primary pull-right">Next</button></a> 
 	<? endif; ?>
 
 
