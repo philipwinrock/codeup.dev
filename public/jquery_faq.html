@@ -1,20 +1,49 @@
 <html>
 <head>
-    <title>Parks List</title>
-  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-    <script>
-        $('document').ready(function() {
-            $('li').css('background-color', '#FF0');
-            $('li').parent().css('background-color', '#0F0');
-            $('ul').each(function(index){
-            	$(this).children().first.css('font-weight','bold');
-            });
-        });
-    </script>
+	
+
+    <style type="text/css">
+
+    .invisible {
+        visibility: hidden;
+    }
+
+
+	</style>
+<title>Parks List</title>
+<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script>
+$(document).ready(function() {
+    $('li').css('background-color', '#FF0');
+    $('li').parent().css('background-color', '#0F0');
+    $('ul').each(function(index){
+    	$(this).children().first().css('font-weight','bold');
+	    $(this).children().last().css('font-weight','bold');
+    });	
+    $('h1').css('font-size' , '60px');
+    $('h3').css('background-color', '#00FFFF');
+    $('li').css('font-size' , '30px');
+
+   	$('ul').click(function() {
+    	$(this).parent().children('ul').fadeToggle(5000);
+
+    });
+
+	
+            	
+});
+ 	 
+
+    
+
+
+
+
+</script>
 </head>
 <body>
     <h1>Parks List</h1>
-    <h3>National Parks</h3>
+    <h2>National Parks</h2>
     <ul id="national-parks">
         <li>Arches</li>
         <li>Badlands</li>
@@ -22,7 +51,7 @@
         <li>Denali</li>
         <li>Everglades</li>
     </ul>
-    <h3>State Parks of Texas</h3>
+    <h2>State Parks of Texas</h2>
     <ul id="state-parks-texas">
         <li>Abilene</li>
         <li>Big Bend</li>
@@ -30,5 +59,11 @@
         <li>Davis Mountains</li>
         <li>Enchanted Rock</li>
     </ul>
+   
+       			       
+              
+              
+             
+
 </body>
 </html>
