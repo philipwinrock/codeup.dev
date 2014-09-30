@@ -1,41 +1,42 @@
 var colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet'];
- var color = colors[Math.floor(Math.random()*colors.length)];
+var color = colors[Math.floor(Math.random()*colors.length)];
 
 var favorite = 'blue';
  //todo, change this to your favorit
 
-	 console.log('test');
+console.log('test');
 
 
 if (color == 'blue') {
-    message = "favorite is blue.";
-} else  {
-    message = "it is not.";
+	message = "favorite is blue.";
+} 	else  {
+		message = "it is not.";
 }
- if(color == 'red') {
+if(color == 'red') {
 	message = "sailer take warning";
-} else {
-	message = "sailer go drinking";
+
+} 	else {
+		message = "sailer go drinking";
 }
- if(color == 'orange'){
- 	message = "beautiful sunset";
+if(color == 'orange'){
+	message = "beautiful sunset";
  }
- else {
- 	message = "drink orange juice";
- }
+ 	else {
+		message = "drink orange juice";
+}
  if(color == 'yellow'){
- 	message = "think of bananas";
- }
+	message = "think of bananas";
+}
  
- else {
- 	message = "yellow submarine";
+ 	else {
+		message = "yellow submarine";
  
- }
- if(color=='green'){
- 	message= "I am green";
- }else {
- 	message = "Not so green";
- }
+}
+if(color=='green'){
+	message= "I am green";
+}	else {
+		message = "Not so green";
+}
 	console.log(message);
 
 

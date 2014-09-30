@@ -38,9 +38,9 @@ $stmt = $dbc->query("SELECT park_name, location ,date_established , area_in_acre
 
 LIMIT 4 OFFSET $offset");
 
-				$parks = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$parks = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
-					$count=(int)$dbc->query('SELECT count(*) FROM national_parks')->fetchColumn();
+$count=(int)$dbc->query('SELECT count(*) FROM national_parks')->fetchColumn();
 
 
 ?>
@@ -64,12 +64,12 @@ LIMIT 4 OFFSET $offset");
 
 
 <?foreach ($parks as $parkInfo):?>
-<tr>
-	<td><h3><?= $parkInfo['park_name'];?></h3></td>
-	<td><h4><?= $parkInfo['location'];?></h4></td>
-	<td><h4><?= $parkInfo['date_established'];?></h4></td>
-	<td><h4><?= $parkInfo['area_in_acres'];?></h4></td>
-</tr>
+	<tr>
+		<td><h3><?= $parkInfo['park_name'];?></h3></td>
+		<td><h4><?= $parkInfo['location'];?></h4></td>
+		<td><h4><?= $parkInfo['date_established'];?></h4></td>
+		<td><h4><?= $parkInfo['area_in_acres'];?></h4></td>
+	</tr>
 
 <?endforeach;?>
 
@@ -77,12 +77,12 @@ LIMIT 4 OFFSET $offset");
 	<? if ($offset != 0):?>
 		<a href="?offset=<?=$offset-4;?>"><button class="btn btn-primary">Prev</button></a>
 	<? endif; ?> 
-<? if (($offset +4)< $count): ?>
+	<? if (($offset +4)< $count): ?>
 	<a href="?offset=<?=$offset+4;?>"><button class="btn btn-primary pull-right">Next</button></a> 
 	<? endif; ?>
 
 
-         <h2>Add New Park</h2>
+<h2>Add New Park</h2>
     <form method="POST">
         <label for="Park_name">Parkname: </label> <input type="text" name="Park_name" id="Park_name" class="form-control"> <br>
         <label for="Location">Location: </label> <input type="text" name="Location" id="Location" class="form-control"> <br>
@@ -92,8 +92,7 @@ LIMIT 4 OFFSET $offset");
         <input type="submit" value="Submit" class="btn btn-primary">
     </form>      
         
-
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 </body>
 

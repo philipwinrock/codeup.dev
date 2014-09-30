@@ -1,54 +1,39 @@
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Exampe jQuery Page</title>
-    <style>
-        .important {
-            text-align: center;
-        }
-    </style>
-    <script src="jquery-1.11.1.js"></script>
+    <meta charset="utf-8" />
+    
+    <title>JQuery, YAY!</title>
+</head>
+<body>
+    <h1 id="heading" data-alt-heading="MAGIC">Example Page</h1>
+    
+    <button type="button" id="swap-heading">Do The Thing!</button>
+ 
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
     <script>
-    		$('document').ready(function() {
-            $('#codeup').hover(
-                function() {
-                    $(this).css('background-color', '#FF0');
-                },
-                function() {
-                    $(this).css('background-color', '#FFF');
-                }
-            );
+        $(document).ready(function() {
+            $("#swap-heading").click(function() {
+                // grab the value of "data-alt-heading"
+                var newHeading = $("#heading").data('alt-heading');
+                
+                // grab the current HTML content
+                var currentHeading = $("#heading").html();
+                
+                // save the current HTML content in the data store
+                $("#heading").data('alt-heading', currentHeading);
+                
+                // set the element HTML to the new heading
+                $("#heading").html(newHeading);
+            });
         });
     </script>
-</head>
-<body>
-    <h1 id="codeup">Hello Codeup</h1>
 </body>
 </html>
-    		
-				
-     		
- 		
-
-    </script>
-</head>
-<body>
-	
-			
-    	
-    <!-- <h1>Example Page</h1> -->
-    <div class="important">
-        <h3>NOTICE</h3>
-        <p>This is an important message!</p>
-        
-        	<ul><li>how does it happen</li></ul>
 
 
-        
-    </div>
-    <div class="not-important">
-        <h2>Lorem Ipsum</h2>
-        <p>Lorem ipsum dolor sit amet, incididunt ut <span class="important">labore et dolore magna aliqua.</span>, quis ut aliquip ex ea commodo.</p>
-    </div>
-    <p class="important">This is also very important.</p>
-</body>
-</html>
+
+
+
+
+
