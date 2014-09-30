@@ -24,8 +24,8 @@ $(document).ready(function() {
     $('h3').css('background-color', '#00FFFF');
     $('li').css('font-size' , '30px');
 
-   	$('ul').click(function() {
-    	$(this).parent().children('ul').fadeToggle(5000);
+   	$('button').click(function() {
+    	$(this).parent().children('li').fadeToggle(5000);
 
     });
 
@@ -50,6 +50,7 @@ $(document).ready(function() {
         <li>Carlsbad Caverns</li>
         <li>Denali</li>
         <li>Everglades</li>
+        <button>click</button>
     </ul>
     <h2>State Parks of Texas</h2>
     <ul id="state-parks-texas">
@@ -58,6 +59,7 @@ $(document).ready(function() {
         <li>Choke Canyon</li>
         <li>Davis Mountains</li>
         <li>Enchanted Rock</li>
+        <button>click</button>
     </ul>
    
        			       
