@@ -1,0 +1,17 @@
+/* Move down content because we have a fixed navbar that is 50px tall */
+
+/* This targets the tag "body"*/
+body {
+  padding-top: 50px;
+  padding-bottom: 20px;
+}
+
+/* This targets the class "jumbotron"*/
+.jumbotron {
+	background-color: rgb(186, 231, 241);
+}
+
+/* This targets the id "whatever-id"*/
+#whatever-id {
+
+}
