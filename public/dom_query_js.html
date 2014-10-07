@@ -1,31 +1,23 @@
 <html>
 <head>
-    <title>DOM: Query and Modify</title>
+<title>DOM: Query and Modify</title>
 </head>
 <body>
-
-
-    <h1 id="main-header">Hello World!</h1>
-    <ul>
-        <li data-dbid="1">Item 1</li>
-        <li data-dbid="2">Item 2</li>
-        <li data-dbid="3">Item 3</li>
-        <li data-dbid="4">Item 4</li>
-        <li data-dbid="5">Item 5</li>
-
-    </ul>
-    <h2 id="sub-header">Hello Again.</h2>
-
+<h1 id="main-header">Hello World!</h1>
+<ul>
+    <li data-dbid="1">Item 1</li>
+    <li data-dbid="2">Item 2</li>
+    <li data-dbid="3">Item 3</li>
+    <li data-dbid="4">Item 4</li>
+    <li data-dbid="5">Item 5</li>
+</ul>
+<h2 id="sub-header">Hello Again.</h2>
 
     <p><button id="button1">Click to alter main header!</button></p>
     <button id="button2">Btn2</button>
     <button id="button3">Btn3</button>
     <button id="button4">Btn4</button>
-
-    
-
     <p class="sub-paragraph">
-        
 
         Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
         eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
@@ -36,7 +28,11 @@
         culpa qui officia deserunt mollit anim id est laborum.
     </p>
 
-    <script>
+
+
+
+    
+<script>
 
        
 
@@ -54,49 +50,49 @@
 
 
 
-                / / todo: get the main header element by id
+ / / todo: get the main header element by id
 
-        var mainHeader = document.getElementById('main-header');
-            console.log(mainHeader);
+var mainHeader = document.getElementById('main-header');
+console.log(mainHeader);
 
-                // todo: set inner html of mainHeader to "JavaScript is Cool
-        var button1 = addEventListener('click', function() {
-            mainHeader.innerHTML = "JavaScript is Cool";
-                console.log(mainHeader.innerHTML);
-    }
-        
-                // todo: get the sub header element by id
-         var subHeader = document.getElementById('sub-header');
-            console.log(subHeader);
-                // todo: set the text color of subHeader to blue
-                subHeader.style['color'] = 'blue';
-                    console.log(subHeader);
+    // todo: set inner html of mainHeader to "JavaScript is Cool
+var button1 = addEventListener('click', function() {
+    mainHeader.innerHTML = "JavaScript is Cool";
+    console.log(mainHeader.innerHTML);
+}
+    
+     // todo: get the sub header element by id
+var subHeader = document.getElementById('sub-header');
+console.log(subHeader);
+// todo: set the text color of subHeader to blue
+subHeader.style['color'] = 'blue';
+console.log(subHeader);
 
-                 // todo: get all list items
-         var listItems = document.getElementsByTagName('li');
-         
-         console.log(listItems);
+    // todo: get all list items
+ var listItems = document.getElementsByTagName('li');
+ 
+ console.log(listItems);
 
-                // todo: set text color on every other list item to grey
-                // todo: set text color of li with dbid = 1 to blue
-        for (var i = 0; i < listItems.length; i+=2) {
-            listItems[i].style['color'] = 'red';
-    }
+    // todo: set text color on every other list item to grey
+    // todo: set text color of li with dbid = 1 to blue
+for (var i = 0; i < listItems.length; i+=2) {
+    listItems[i].style['color'] = 'red';
+}
 
-        listItems[0].style['color'] = 'blue';
-        console.log(listItems);
+listItems[0].style['color'] = 'blue';
+console.log(listItems);
     
 
-                 // todo: get all elements with class name sub-paragraph
-         var subParagraphs = document.getElementsByClassName('sub-paragraph');
-         console.log(typeof(subParagraphs));
-         subParagraphs[0].innerHTML = "Mission Accomplished";
-         console.log(subParagraphs.innerHTML);
-        // todo: change the text in the first sub paragraph to "Mission Accomplished!"
+         // todo: get all elements with class name sub-paragraph
+ var subParagraphs = document.getElementsByClassName('sub-paragraph');
+ console.log(typeof(subParagraphs));
+ subParagraphs[0].innerHTML = "Mission Accomplished";
+ console.log(subParagraphs.innerHTML);
+// todo: change the text in the first sub paragraph to "Mission Accomplished!"
 //--------------------------------------------------------------------------------------------------------------------------------------//
         
 
-    </script>
+</script>
 
 </body>
 </html>
